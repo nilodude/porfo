@@ -1,0 +1,10 @@
+services:
+  porfo-ui:
+    image: porfo-ui:latest
+    hostname: porfo-ui
+    container_name: porfo-ui
+    ports:
+      - 4200:80
+    working_dir: /app
+    environment:
+      API_URL: ${API_URL}
