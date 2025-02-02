@@ -38,14 +38,15 @@ const sketch = (p: p5) => {
     let h = (y*y/3);
     h = h> capao ? capao : (h<-capao ? -capao : h)
     p.ellipse(x, y+ p.height / 2 ,w ,h);
-      
+    
     x = x + step*(flip?-1:1)+w*(Math.random()-0.5);
     y += h/10000+(Math.random()-0.5) *-3
     
     if(Math.abs(p.windowWidth -x) < margin || x<margin ){
       flip = !flip
     }
-      
+    p.curve(x, y+500 ,x+w ,y+500,x, y+500 ,x+500*y/20 ,y+h+500)
+    p.curve(x, y+Math.random()*500 ,x+w ,y+Math.random()*500,x, y+Math.random()*500 ,x+Math.random()*500*y/20 ,y+h+Math.random()*500)
   };
 };
 
