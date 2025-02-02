@@ -12,18 +12,26 @@ const sketch = (p: p5) => {
   };
 
   p.windowResized = () => {
-    p.background(220);
+    
     p.resizeCanvas(p.windowWidth, p.windowHeight);
+    p.background(220);
+    p.line(0, 0, p.windowWidth, p.windowWidth);
   };
 
-  let x = 0;
-
+  let x = 100;
+  let y = 0;
+  let flip =false
   p.draw = () => {
-    p.background(220);
-    // if (x < 300) {
-      p.ellipse(x, p.height / 2, 20, 20);
-      x = x + 1;
-    // }
+    console.log(p.width , x ,flip)
+    
+      p.fill(255,255,255,Math.random()*100)
+      p.ellipse(x, p.height / 2 +y, x*y/900,y/5);
+      x = !flip ? x + 3+Math.random()-0.5 : x - 3+Math.random()-0.5;
+      y += (Math.random()-0.5) *-5
+    
+    if(Math.abs(p.width -x) < 10 || x<100 ){
+      flip = !flip
+    }
   };
 };
 
