@@ -24,14 +24,20 @@ const sketch = (p: p5) => {
   p.draw = () => {
     console.log(p.width , x ,flip)
     
-      p.fill(255,255,255,Math.random()*100)
-      p.ellipse(x, p.height / 2 +y, x*y/900,y/5);
-      x = !flip ? x + 3+Math.random()-0.5 : x - 3+Math.random()-0.5;
-      y += (Math.random()-0.5) *-5
+    p.fill(255,255,255,Math.random()*50)
     
-    if(Math.abs(p.width -x) < 10 || x<100 ){
+    let w = x*y/900
+    let h = -y*y/2
+    p.ellipse(x, y+ p.height / 2 ,w ,h);
+      
+    
+    x = !flip ? x + 3+Math.random()-0.5 : x - 3+Math.random()-0.5;
+    y += (Math.random()-0.5) *-5
+    
+    if(Math.abs(p.width -x) < 100 || x<100 ){
       flip = !flip
     }
+      
   };
 };
 
