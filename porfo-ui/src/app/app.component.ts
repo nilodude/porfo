@@ -17,24 +17,32 @@ const sketch = (p: p5) => {
     p.background(220);
     p.line(0, 0, p.windowWidth, p.windowWidth);
   };
-
-  let x = 100;
+  let colors = [
+    'dedeff',
+    '#cbffcb',
+    '#cbdeff',
+    '#122131']
+  let margin = 300
+  let x = margin;
   let y = 0;
   let flip =false
+  let step = 1
+  let capao = 80
   p.draw = () => {
     console.log(p.width , x ,flip)
     
-    p.fill(255,255,255,Math.random()*50)
+    p.fill(180,170,200,Math.random()*70)
+    p.stroke(Math.random()*100,Math.random()*100,Math.random()*100,Math.random()*100)
     
-    let w = x*y/900
-    let h = -y*y/2
+    let w = x/2*y/900
+    let h = (y*y/3);
+    h = h> capao ? capao : (h<-capao ? -capao : h)
     p.ellipse(x, y+ p.height / 2 ,w ,h);
       
+    x = x + step*(flip?-1:1)+w*(Math.random()-0.5);
+    y += h/10000+(Math.random()-0.5) *-5
     
-    x = !flip ? x + 3+Math.random()-0.5 : x - 3+Math.random()-0.5;
-    y += (Math.random()-0.5) *-5
-    
-    if(Math.abs(p.width -x) < 100 || x<100 ){
+    if(Math.abs(p.windowWidth -x) < margin || x<margin ){
       flip = !flip
     }
       
