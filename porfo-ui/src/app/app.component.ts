@@ -28,7 +28,7 @@ const sketch = (p: p5) => {
   let step = 10
   let capao = 80
   p.draw = () => {
-    
+    // TODO: que caiga lluvia moraita y que por donde vaya el raton haya un paraguas, y la lluvia rebote
     p.fill(180,170,200,Math.random()*50)
     p.stroke(100,Math.random()*80,200,Math.random()*100)
     // p.ellipse(0,-p.windowHeight/2,50,50)
