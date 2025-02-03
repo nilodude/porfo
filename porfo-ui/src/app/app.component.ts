@@ -7,15 +7,13 @@ const sketch = (p: p5) => {
 
   p.setup = () => {
     p.createCanvas(p.windowWidth, p.windowHeight);
-    p.background(220);
-    p.line(0, 0, p.windowWidth, p.windowWidth);
+    // p.background(120);
   };
 
   p.windowResized = () => {
     
     p.resizeCanvas(p.windowWidth, p.windowHeight);
-    p.background(220);
-    p.line(0, 0, p.windowWidth, p.windowWidth);
+    // p.background(220);
   };
   let colors = [
     'dedeff',
@@ -29,7 +27,6 @@ const sketch = (p: p5) => {
   let step = 10
   let capao = 80
   p.draw = () => {
-    console.log(p.width , x ,flip)
     
     p.fill(180,170,200,Math.random()*70)
     p.stroke(Math.random()*100,Math.random()*100,Math.random()*100,Math.random()*100)
