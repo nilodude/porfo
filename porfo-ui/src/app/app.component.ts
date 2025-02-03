@@ -20,7 +20,7 @@ const sketch = (p: p5) => {
     '#cbffcb',
     '#cbdeff',
     '#122131']
-  let margin = 100
+  let margin = 700
   let x = margin;
   let y = 0;
   let flipX =false
@@ -31,20 +31,26 @@ const sketch = (p: p5) => {
     
     p.fill(180,170,200,Math.random()*50)
     p.stroke(100,Math.random()*80,200,Math.random()*100)
-    
+    // p.ellipse(0,-p.windowHeight/2,50,50)
     let w = (x/40)*y/10000
     let h = (y*y/3);
     h = h> capao ? capao : (h<-capao ? -capao : h)
-    p.ellipse(x-p.width/2, y ,w ,h);
+    
+    p.ellipse(x-p.width/2,y,w ,h);
     p.rotateZ(w)
     x = x + step*(flipX?-1:1)+w*(Math.random()-0.5);
-    y =y + (flipX?-1:1)*h/400+(Math.random()-0.5) *-28
+    y =y + (flipX?-1:1)*h/400+(Math.random()-0.5) *-88
     
     if(Math.abs(p.windowWidth -x) < margin || x<margin ){
       flipX = !flipX
     }
-    if(Math.abs(p.windowHeight -y) < margin || y<margin ){
-      flipY = !flipY
+    if(y>p.windowHeight/2){
+      y = -p.windowHeight/2
+      flipY = true
+    } 
+    if(y<-p.windowHeight/2){
+      y =p.windowHeight/2
+      flipY = true
     }
       
   };
