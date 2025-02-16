@@ -17,13 +17,18 @@ const sketch = (p: p5) => {
   };
   
   p.mouseMoved= (event:any)=>{
+    if(event.target.className.includes('logo')){
+      console.log(event.target.className)
+    }
+      
     p.fill(180,170,200,Math.random()*2)
     p.stroke(100,Math.random()*100,200,Math.random()*50)
     
     p.rotateX(0)
     p.translate(0,0,0)
+    p.torus(event.clientX-p.windowWidth/2,event.clientY-p.windowHeight/2,10 ,10);
+    p.translate(0,0,0)
     p.ellipse(event.clientX-p.windowWidth/2,event.clientY-p.windowHeight/2,10 ,10);
-    // p.torus(event.clientX-p.windowWidth/2,event.clientY-p.windowHeight/2,10 ,10);
 
   }
 
