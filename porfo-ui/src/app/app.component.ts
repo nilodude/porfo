@@ -3,11 +3,12 @@ import { RouterOutlet } from '@angular/router';
 import p5 from 'p5';
 
 const sketch = (p: p5) => {
+  let cam: p5.Camera;
   p.preload = () => {};
   const appMargin = {x:0,y:5}
   p.setup = () => {
     p.createCanvas(p.windowWidth-appMargin.x, p.windowHeight-appMargin.y, 'webgl');
-    // p.background(120);
+    cam = p.createCamera();
   };
 
   p.windowResized = () => {
@@ -28,7 +29,9 @@ const sketch = (p: p5) => {
   let capao = 80
   p.draw = () => {
     // TODO: que caiga lluvia moraita y que por donde vaya el raton haya un paraguas, y la lluvia rebote
+    // cam.tilt(p.mouseX/100)
     step = p.mouseX/100
+    capao = p.mouseY/20
     p.orbitControl();
     p.fill(180,170,200,Math.random()*50)
     p.stroke(100,Math.random()*80,200,Math.random()*60)
