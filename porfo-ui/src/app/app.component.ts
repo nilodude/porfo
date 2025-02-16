@@ -28,6 +28,7 @@ const sketch = (p: p5) => {
   let capao = 80
   p.draw = () => {
     // TODO: que caiga lluvia moraita y que por donde vaya el raton haya un paraguas, y la lluvia rebote
+    step = p.mouseX/100
     p.orbitControl();
     p.fill(180,170,200,Math.random()*50)
     p.stroke(100,Math.random()*80,200,Math.random()*60)
