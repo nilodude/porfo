@@ -7,7 +7,9 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "deploy": "ng build && gh-pages -d ./dist"
+    "deploy": "ng build && gh-pages -d ./dist",
+    "github-build": "ng build --configuration production --base-href 'https://nilodude.github.io/porfo/'",
+    "github-deploy": "npx angular-cli-ghpages --dir=dist/porfo-ui --no-silent"
   },
   "private": true,
   "dependencies": {
@@ -34,6 +36,7 @@
     "@angular/localize": "^19.1.0",
     "@types/jasmine": "~5.1.0",
     "@types/p5": "^1.7.6",
+    "angular-cli-ghpages": "^2.0.3",
     "gh-pages": "^6.3.0",
     "jasmine-core": "~5.5.0",
     "karma": "~6.4.0",
