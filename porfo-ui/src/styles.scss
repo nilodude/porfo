@@ -2,3 +2,35 @@
 
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
+
+.logo{
+    mask-repeat: no-repeat;
+    background-color: rgb(78, 15, 129);
+    mask-size: 100%;
+    mask-position: center;
+    min-width: 24em;
+    transition: filter 1.1s ease;    
+}
+
+.bandcampLogo {
+    -webkit-mask-image: url('../public/icons/bandcamp.svg');
+    mask-image: url('../public/icons/bandcamp.svg');
+    mask-size: 97%;
+}
+
+.spotifyLogo {
+    -webkit-mask-image: url('../public/icons/spotify.svg');
+    mask-image: url('../public/icons/spotify.svg');
+    mask-size: 84%;
+}
+
+.soundcloudLogo {
+    -webkit-mask-image: url('../public/icons/soundcloud.svg');
+    mask-image: url('../public/icons/soundcloud.svg');
+    mask-size: 100%;
+}
+
+.logoContainer:hover{
+    transform: scale(1.1);
+    filter: drop-shadow(0 -1mm 4mm rgb(23, 0, 49));
+}

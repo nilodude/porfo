@@ -1,6 +1,19 @@
 <div class="app" #sketch>
     <div class="main d-flex justify-content-center align-items-center w-100 h-100">
-        hola
+        <div class="d-flex flex-column gap-2">
+            <div class="logoContainer">
+                <div class="bandcampLogo logo p-5 align-items-center" (click)="open('bandcamp')"></div>
+            </div>
+            <div class="logoContainer">
+                <div class="spotifyLogo logo p-5 align-items-center" (click)="open('spotify')"></div>
+            </div>
+            <div class="logoContainer">
+                <div class="soundcloudLogo logo p-5 align-items-center" (click)="open('soundcloud')"></div>
+            </div>
+            
+            
+        </div>
+        
     </div>
 </div>
 

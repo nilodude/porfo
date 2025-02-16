@@ -15,6 +15,18 @@ const sketch = (p: p5) => {
     p.resizeCanvas(p.windowWidth-appMargin.x, p.windowHeight-appMargin.y);
     // p.background(220);
   };
+  
+  p.mouseMoved= (event:any)=>{
+    p.fill(180,170,200,Math.random()*2)
+    p.stroke(100,Math.random()*100,200,Math.random()*50)
+    
+    p.rotateX(0)
+    p.translate(0,0,0)
+    p.ellipse(event.clientX-p.windowWidth/2,event.clientY-p.windowHeight/2,10 ,10);
+    // p.torus(event.clientX-p.windowWidth/2,event.clientY-p.windowHeight/2,10 ,10);
+
+  }
+
   let colors = [
     'dedeff',
     '#cbffcb',
@@ -32,9 +44,8 @@ const sketch = (p: p5) => {
     // cam.tilt(p.mouseX/100)
     step = p.mouseX/100
     capao = p.mouseY/20
-    p.orbitControl();
     p.fill(180,170,200,Math.random()*50)
-    p.stroke(100,Math.random()*80,200,Math.random()*60)
+    p.stroke(100,Math.random()*100,200,Math.random()*60)
     // p.ellipse(0,-p.windowHeight/2,50,50)
     let w = (x/40)*y/10000
     let h = (y*y/3);
@@ -58,7 +69,12 @@ const sketch = (p: p5) => {
       y =p.windowHeight/2
       flipY = true
     }
-      
+    let logos = document.getElementsByClassName('logo')
+    if(logos){
+      Array.from(logos).forEach((logo:any)=>{
+        logo.style.filter = 'blur(40px) invert('+y/70+'%)'
+      })
+    }
   };
 };
 
@@ -72,16 +88,17 @@ export class AppComponent implements OnInit, AfterViewInit{
   title = 'porfo-ui';
   p5!: p5;
   @ViewChild('sketch') sketch!: ElementRef;
-  
+  sites: any = {'soundcloud': 'https://soundcloud.com/nilodude', 'bandcamp':'https://nilodude.bandcamp.com/', 'spotify':'https://open.spotify.com/artist/5QO3kUcqzBsVIwbtviZ2Be'}
   ngOnInit(): void {
 
   }
   ngAfterViewInit() {
     this.p5 = new p5(sketch, this.sketch.nativeElement);
-
   }
   
-  
+  open(site: string){
+    window.open(this.sites[site])
+  }
   
 }
 
