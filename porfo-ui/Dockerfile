@@ -20,7 +20,7 @@ RUN npm run build --prod
 #STAGE 1: BUILD NGINX SERVER WITH COMPILED NODE FRONTEND APP
 FROM nginx:alpine
 
-COPY /dist/porfo-ui /usr/share/nginx/html
+COPY /dist /usr/share/nginx/html
 COPY ./nginx-custom.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 4200

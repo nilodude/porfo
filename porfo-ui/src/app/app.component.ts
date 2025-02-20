@@ -69,7 +69,7 @@ const sketch = (p: p5) => {
     let logos = document.getElementsByClassName('logo')
     if(logos){
       Array.from(logos).forEach((logo:any)=>{
-        logo.style.filter = 'blur(30px) invert('+x*y/19000+'%)'
+        logo.style.filter = 'blur(30px) invert('+x*y/40000+'%)'
       })
     }
   };
