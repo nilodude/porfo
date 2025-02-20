@@ -23,6 +23,9 @@ const sketch = (p: p5) => {
   };
   
   p.mouseMoved= (event:any)=>{
+    if(Math.random()>0.7){
+      // p.background('#131313')
+    }
     if(event.target.className.includes('logo')){
       // console.log(event.target.className)
     }
@@ -33,9 +36,11 @@ const sketch = (p: p5) => {
     p.torus(event.clientX-p.windowWidth/2,event.clientY-p.windowHeight/2,10 ,10);
     p.translate(0,0,0)
     p.ellipse(event.clientX-p.windowWidth/2,event.clientY-p.windowHeight/2,10 ,10);
+    
   }
 
   p.draw = () => {
+    
     // TODO: que caiga lluvia moraita y que por donde vaya el raton haya un paraguas, y la lluvia rebote
     // cam.tilt(p.mouseX/100)
     step = p.mouseX == 0? step : p.mouseX/100 
@@ -72,6 +77,7 @@ const sketch = (p: p5) => {
         logo.style.filter = 'blur(30px) invert('+x*y/40000+'%)'
       })
     }
+    
   };
 };
 
