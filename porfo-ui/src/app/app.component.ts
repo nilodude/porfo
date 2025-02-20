@@ -4,39 +4,6 @@ import p5 from 'p5';
 
 const sketch = (p: p5) => {
   let cam: p5.Camera;
-  p.preload = () => {};
-  const appMargin = {x:0,y:5}
-  p.setup = () => {
-    p.createCanvas(p.windowWidth-appMargin.x, p.windowHeight-appMargin.y, 'webgl');
-    cam = p.createCamera();
-  };
-
-  p.windowResized = () => {
-    p.resizeCanvas(p.windowWidth-appMargin.x, p.windowHeight-appMargin.y);
-    // p.background(220);
-  };
-  
-  p.mouseMoved= (event:any)=>{
-    if(event.target.className.includes('logo')){
-      console.log(event.target.className)
-    }
-      
-    p.fill(180,170,200,Math.random()*2)
-    p.stroke(100,Math.random()*100,200,Math.random()*50)
-    
-    p.rotateX(0)
-    p.translate(0,0,0)
-    p.torus(event.clientX-p.windowWidth/2,event.clientY-p.windowHeight/2,10 ,10);
-    p.translate(0,0,0)
-    p.ellipse(event.clientX-p.windowWidth/2,event.clientY-p.windowHeight/2,10 ,10);
-
-  }
-
-  let colors = [
-    'dedeff',
-    '#cbffcb',
-    '#cbdeff',
-    '#122131']
   let margin = 300
   let x = margin;
   let y = 0;
@@ -44,11 +11,36 @@ const sketch = (p: p5) => {
   let flipY =false
   let step = 10
   let capao = 80
+  p.preload = () => {};
+  const appMargin = {x:0,y:0}
+  p.setup = () => {
+    p.createCanvas(p.windowWidth-appMargin.x, p.windowHeight-appMargin.y, 'webgl');
+    // cam = p.createCamera();
+  };
+
+  p.windowResized = () => {
+    p.resizeCanvas(p.windowWidth-appMargin.x, p.windowHeight-appMargin.y);
+  };
+  
+  p.mouseMoved= (event:any)=>{
+    if(event.target.className.includes('logo')){
+      // console.log(event.target.className)
+    }
+    p.fill(180,170,200,Math.random()*2)
+    p.stroke(100,Math.random()*100,200,Math.random()*50)
+    p.rotateX(0)
+    p.translate(0,0,0)
+    p.torus(event.clientX-p.windowWidth/2,event.clientY-p.windowHeight/2,10 ,10);
+    p.translate(0,0,0)
+    p.ellipse(event.clientX-p.windowWidth/2,event.clientY-p.windowHeight/2,10 ,10);
+  }
+
   p.draw = () => {
     // TODO: que caiga lluvia moraita y que por donde vaya el raton haya un paraguas, y la lluvia rebote
     // cam.tilt(p.mouseX/100)
-    step = p.mouseX/100
-    capao = p.mouseY/20
+    step = p.mouseX == 0? step : p.mouseX/100 
+    capao =  p.mouseY == 0? 10 :  p.mouseY/20
+    // console.log(step,capao)
     p.fill(180,170,200,Math.random()*50)
     p.stroke(100,Math.random()*100,200,Math.random()*60)
     // p.ellipse(0,-p.windowHeight/2,50,50)
@@ -77,7 +69,7 @@ const sketch = (p: p5) => {
     let logos = document.getElementsByClassName('logo')
     if(logos){
       Array.from(logos).forEach((logo:any)=>{
-        logo.style.filter = 'blur(40px) invert('+y/70+'%)'
+        logo.style.filter = 'blur(30px) invert('+x*y/19000+'%)'
       })
     }
   };
