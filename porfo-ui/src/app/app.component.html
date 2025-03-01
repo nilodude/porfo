@@ -1,7 +1,10 @@
 <div class="app" #sketch>
-    <div class="main d-flex flex-column justify-content-between align-items-center w-100 h-100 pt-5 pb-1">
+    <div class="main d-flex flex-column justify-content-between align-items-center w-100 h-100 pt-5 pb-1 gap-2">
         <!-- TODO: RENDER NI-RO DU-DE with katakana with this font https://fonts.google.com/specimen/DotGothic16?categoryFilters=Appearance:%2FTheme%2FTechno -->
-        <div class="albums d-flex flex-column gap-2">
+        <!-- <div class="jap">
+            {{jap}}
+        </div> -->
+        <div class="albums d-flex flex-column">
             <div *ngFor="let album of this.catalog" class="album d-flex flex-column gap-1 justify-content-center align-items-center p-4">
                 <div class="d-flex align-items-center justify-content-center gap-2">
                     <div class="pointer fs-3" (click)="openAlbum(album.url)">
@@ -13,7 +16,7 @@
                 </div>    
                 <div class="tracks d-flex flex-column gap-1" >
                     <div *ngFor="let track of album.tracks" class="track pointer d-flex gap-1 justify-content-center align-items-center px-1" (click)="openAlbum(track.url)">
-                        <div class="fs-5 text-center">
+                        <div class="trackname text-center">
                             {{track.title}}
                         </div>
                     </div>
@@ -21,7 +24,7 @@
             </div>
 
         </div>
-        <div class="d-flex gap-2 w-100 justify-content-center align-items-end">
+        <div class="d-flex gap-2 w-100 justify-content-center align-items-end py-2">
             <div class="logoContainer">
                 <div class="bandcampLogo logo p-5 align-items-center" (click)="open('bandcamp')"></div>
             </div>

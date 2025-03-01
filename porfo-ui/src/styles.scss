@@ -6,7 +6,7 @@
 .logo{
     mask-repeat: no-repeat;
     background-color: rgb(78, 15, 129);
-    mask-size: 100%;
+    mask-size: 70%;
     mask-position: center;
     min-width: 24em;
    
@@ -28,19 +28,19 @@
 .bandcampLogo {
     -webkit-mask-image: url('../public/icons/bandcamp.svg');
     mask-image: url('../public/icons/bandcamp.svg');
-    mask-size: 97%;
+    // mask-size: 97%;
 }
 
 .spotifyLogo {
     -webkit-mask-image: url('../public/icons/spotify.svg');
     mask-image: url('../public/icons/spotify.svg');
-    mask-size: 84%;
+    mask-size: 60%;
 }
 
 .soundcloudLogo {
     -webkit-mask-image: url('../public/icons/soundcloud.svg');
     mask-image: url('../public/icons/soundcloud.svg');
-    mask-size: 100%;
+    // mask-size: 100%;
 }
 
 .logoContainer:hover{

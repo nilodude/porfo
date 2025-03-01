@@ -94,7 +94,7 @@ export class AppComponent implements OnInit, AfterViewInit{
   p5!: p5;
   @ViewChild('sketch') sketch!: ElementRef;
   sites: any = {'soundcloud': 'https://soundcloud.com/nilodude', 'bandcamp':'https://nilodude.bandcamp.com/', 'spotify':'https://open.spotify.com/artist/5QO3kUcqzBsVIwbtviZ2Be'}
-  
+  jap:string = "ニ lオ ドゥ デ"
   catalog: any =  [
       {
           "type": "album",
@@ -227,11 +227,11 @@ export class AppComponent implements OnInit, AfterViewInit{
         "platform": "SoundCloud",
         "url": "https://soundcloud.com/nilodude/sets/totalph-94",
         "tracks": [
-          {"title": "Jiomega", "url": "https://soundcloud.com/nilodude/jiomega"},
-          {"title": "Mentalidad", "url": "https://soundcloud.com/nilodude/mentalidad"},
-          {"title": "Street Shark", "url": "https://soundcloud.com/nilodude/street-shark"},
-          {"title": "Y si Yo (madre)", "url": "https://soundcloud.com/nilodude/y-si-yo-madre"},
-          {"title": "Farsantedeaupa - Cacatura (alphone Divides By Zero)[BONUS]", "url": "https://soundcloud.com/nilodude/05-farsantedeaupa-cacatura-alphone-divides-by-zerobonus"}
+          {"title": "Jiomega", "url": "https://soundcloud.com/nilodude/01-jiomega?in=nilodude/sets/totalph-94"},
+          {"title": "Mentalidad", "url": "https://soundcloud.com/nilodude/02-mentalidad?in=nilodude/sets/totalph-94"},
+          {"title": "Street Shark", "url": "https://soundcloud.com/nilodude/03-street-shark?in=nilodude/sets/totalph-94"},
+          {"title": "Y si Yo (madre)", "url": "https://soundcloud.com/nilodude/04-y-si-yo-madre?in=nilodude/sets/totalph-94"},
+          {"title": "Farsantedeaupa - Cacatura (alphone Divides By Zero)[BONUS]", "url": "https://soundcloud.com/nilodude/05-farsantedeaupa-cacatura-alphone-divides-by-zerobonus?in=nilodude/sets/totalph-94"}
         ]
       },
       {
@@ -241,11 +241,11 @@ export class AppComponent implements OnInit, AfterViewInit{
         "platform": "SoundCloud",
         "url": "https://soundcloud.com/nilodude/sets/al-yabr",
         "tracks": [
-          {"title": "94 Dunas (farsantedeaupa's First Blood)", "url": "https://soundcloud.com/nilodude/sets/al-yabr/94-dunas-farsantedeaupas-first-blood"},
-          {"title": "Remember Soundboy (voices From Creep Afrika)", "url": "https://soundcloud.com/nilodude/sets/al-yabr/remember-soundboy-voices-from-creep-afrika"},
-          {"title": "Getal Mear (farsantedeaupa Hunts El Colibri)", "url": "https://soundcloud.com/nilodude/sets/al-yabr/getal-mear-farsantedeaupa-hunts-el-colibri"},
-          {"title": "Otsirc Usej Re", "url": "https://soundcloud.com/nilodude/sets/al-yabr/otsirc-usej-re"},
-          {"title": "Sahara Y Sedal [BONUS]", "url": "https://soundcloud.com/nilodude/sets/al-yabr/sahara-y-sedal-bonus"}
+          {"title": "94 Dunas (farsantedeaupa's First Blood)", "url": "https://soundcloud.com/nilodude/01-94-dunas-farsantedeaupas-first-blood?in=nilodude/sets/al-yabr"},
+          {"title": "Remember Soundboy (voices From Creep Afrika)", "url": "https://soundcloud.com/nilodude/02-remember-soundboy-voices-from-creep-afrika?in=nilodude/sets/al-yabr"},
+          {"title": "Getal Mear (farsantedeaupa Hunts El Colibri)", "url": "https://soundcloud.com/nilodude/03-getal-mear-farsantedeaupa-hunts-el-colibri?in=nilodude/sets/al-yabr"},
+          {"title": "Otsirc Usej Re", "url": "https://soundcloud.com/nilodude/04-otsirc-usej-re?in=nilodude/sets/al-yabr"},
+          {"title": "Sahara Y Sedal [BONUS]", "url": "https://soundcloud.com/nilodude/05-sahara-y-sedal-bonus?in=nilodude/sets/al-yabr"}
         ]
       },
       
