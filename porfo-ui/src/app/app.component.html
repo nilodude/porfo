@@ -1,9 +1,9 @@
 <div class="app" #sketch>
-    <div class="main d-flex flex-column justify-content-center align-items-center w-100 h-100">
+    <div class="main d-flex flex-column justify-content-between align-items-center w-100 h-100 pt-5 pb-1">
         <!-- TODO: RENDER NI-RO DU-DE with katakana with this font https://fonts.google.com/specimen/DotGothic16?categoryFilters=Appearance:%2FTheme%2FTechno -->
         <div class="albums d-flex flex-column gap-2">
-            <div *ngFor="let album of this.catalog" class="album d-flex flex-column gap-1 justify-content-center align-items-start p-4">
-                <div class="d-flex align-items-center gap-2">
+            <div *ngFor="let album of this.catalog" class="album d-flex flex-column gap-1 justify-content-center align-items-center p-4">
+                <div class="d-flex align-items-center justify-content-center gap-2">
                     <div class="pointer fs-3" (click)="openAlbum(album.url)">
                         {{album.title}}
                     </div>
@@ -12,8 +12,8 @@
                     </div>
                 </div>    
                 <div class="tracks d-flex flex-column gap-1" >
-                    <div *ngFor="let track of album.tracks" class="track pointer d-flex gap-1 justify-content-start align-items-center px-1" (click)="openAlbum(track.url)">
-                        <div class="fs-5">
+                    <div *ngFor="let track of album.tracks" class="track pointer d-flex gap-1 justify-content-center align-items-center px-1" (click)="openAlbum(track.url)">
+                        <div class="fs-5 text-center">
                             {{track.title}}
                         </div>
                     </div>
