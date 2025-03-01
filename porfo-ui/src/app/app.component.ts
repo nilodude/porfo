@@ -92,6 +92,163 @@ export class AppComponent implements OnInit, AfterViewInit{
   p5!: p5;
   @ViewChild('sketch') sketch!: ElementRef;
   sites: any = {'soundcloud': 'https://soundcloud.com/nilodude', 'bandcamp':'https://nilodude.bandcamp.com/', 'spotify':'https://open.spotify.com/artist/5QO3kUcqzBsVIwbtviZ2Be'}
+  
+  catalog: any =  [
+      {
+          "type": "album",
+          "title": "[DDNS17] Bitches On Acid",
+          "release_date": "2021-12-01",
+          "platform": "Bandcamp",
+          "url": "https://bitchesonacidacid.bandcamp.com/album/ddns17-bitches-on-acid",
+          "tracks": [
+            {
+              "title": "Cruisin",
+              "url": "https://bitchesonacidacid.bandcamp.com/track/cruisin"
+            },
+            {
+              "title": "Días Viejos",
+              "url": "https://bitchesonacidacid.bandcamp.com/track/d-as-viejos"
+            },
+            {
+              "title": "Wearing Very Suspicious Sunglasses for Obvious Reasons",
+              "url": "https://bitchesonacidacid.bandcamp.com/track/wearing-very-suspicious-sunglasses-for-obvious-reasons"
+            },
+            {
+              "title": "Aztec-1",
+              "url": "https://bitchesonacidacid.bandcamp.com/track/aztec-1"
+            },
+            {
+              "title": "Alien B-Boy Battle",
+              "url": "https://bitchesonacidacid.bandcamp.com/track/alien-b-boy-battle"
+            },
+            {
+              "title": "Ácido Chupacabra",
+              "url": "https://bitchesonacidacid.bandcamp.com/track/cido-chupacabra"
+            },
+            {
+              "title": "Dennis Coffey",
+              "url": "https://bitchesonacidacid.bandcamp.com/track/dennis-coffey"
+            },
+            {
+              "title": "Uncanny Silicon",
+              "url": "https://bitchesonacidacid.bandcamp.com/track/uncanny-silicon"
+            },
+            {
+              "title": "Ácido Two",
+              "url": "https://bitchesonacidacid.bandcamp.com/track/cido-two"
+            },
+            {
+              "title": "Sérselo",
+              "url": "https://bitchesonacidacid.bandcamp.com/track/s-rselo"
+            }
+          ]
+        },
+      {
+        "type": "album",
+        "title": "Acid on Bitches",
+        "release_date": "2021-12-01",
+        "platform": "Bandcamp",
+        "url": "https://nilodude.bandcamp.com/releases",
+        "path": "D:\\MUSICA\\ableton\\ni uno mas\\bitchesonacid\\entrega",
+        "tracks": [
+          {"title": "Dennis Coffey", "url": "https://nilodude.bandcamp.com/track/dennis-coffey"},
+          {"title": "Uncanny Silicon", "url": "https://nilodude.bandcamp.com/track/uncanny-silicon"},
+          {"title": "Ácido Two", "url": "https://nilodude.bandcamp.com/track/a3-cido-two"},
+          {"title": "Sérselo", "url": "https://nilodude.bandcamp.com/track/s-rselo"},
+          {"title": "Cruisin", "url": "https://nilodude.bandcamp.com/track/cruisin"},
+          {"title": "Dias Viejos", "url": "https://nilodude.bandcamp.com/track/dias-viejos"},
+          {"title": "Wearing Very Suspicious Sunglasses for Obvious Reasons", "url": "https://nilodude.bandcamp.com/track/wearing-very-suspicious-sunglasses-for-obvious-reasons"},
+          {"title": "Aztec-1", "url": "https://nilodude.bandcamp.com/track/aztec-1"},
+          {"title": "Alien B-Boy Battle", "url": "https://nilodude.bandcamp.com/track/alien-b-boy-battle"},
+          {"title": "Ácido Chupacabra", "url": "https://nilodude.bandcamp.com/track/cido-chupacabra"}
+        ]
+      },
+      {
+        "type": "album",
+        "title": "Grinding EP",
+        "release_date": "2017-08-17",
+        "platform": "Bandcamp",
+        "url": "https://industrias94.bandcamp.com/album/grinding-ep-ind001",
+        "tracks": [
+          {
+            "title": "Poisson XXX (ft. Digital Diógenes)",
+            "artist": "Lorenzo Soria",
+            "url": "https://industrias94.bandcamp.com/track/lorenzo-soria-poisson-xxx-ft-digital-diogenes"
+          },
+          {
+            "title": "No Chances",
+            "artist": "Alphone",
+            "url": "https://industrias94.bandcamp.com/track/alphone-no-chances"
+          },
+          {
+            "title": "Modern Drugs",
+            "artist": "Lorenzo Soria",
+            "url": "https://industrias94.bandcamp.com/track/lorenzo-soria-modern-drugs"
+          },
+          {
+            "title": "Dungeology",
+            "artist": "Alphone",
+            "url": "https://industrias94.bandcamp.com/track/alphone-dungeology"
+          }
+        ]
+      },
+      {
+        "type": "album",
+        "title": "Bounded Input Bouncing Output",
+        "release_date": "2019-01-21",
+        "platform": "Bandcamp",
+        "url": "https://nilodude.bandcamp.com/album/bounded-input-bouncing-output-ind005",
+        "path": "D:\\MUSICA\\horno\\nilodude_bibo_ind005",
+        "tracks": [
+          {"title": "iloguarda", "url": "https://nilodude.bandcamp.com/track/iloguarda"},
+          {"title": "Lowpass Fistro", "url": "https://nilodude.bandcamp.com/track/lowpass-fistro-2"},
+          {"title": "AAAAAAA", "url": "https://nilodude.bandcamp.com/track/aaaaaaa"},
+          {"title": "Mazedrum", "url": "https://nilodude.bandcamp.com/track/mazedrum"},
+          {"title": "BBBBBBBB", "url": "https://nilodude.bandcamp.com/track/bbbbbbbb"}
+        ]
+      },
+      {
+        "type": "album",
+        "title": "TOTALPH 94",
+        "release_date": "2016-05-10",
+        "platform": "SoundCloud",
+        "url": "https://soundcloud.com/nilodude/sets/totalph-94",
+        "tracks": [
+          {"title": "Jiomega", "url": "https://soundcloud.com/nilodude/jiomega"},
+          {"title": "Mentalidad", "url": "https://soundcloud.com/nilodude/mentalidad"},
+          {"title": "Street Shark", "url": "https://soundcloud.com/nilodude/street-shark"},
+          {"title": "Y si Yo (madre)", "url": "https://soundcloud.com/nilodude/y-si-yo-madre"},
+          {"title": "Farsantedeaupa - Cacatura (alphone Divides By Zero)[BONUS]", "url": "https://soundcloud.com/nilodude/05-farsantedeaupa-cacatura-alphone-divides-by-zerobonus"}
+        ]
+      },
+      {
+        "type": "album",
+        "title": "AL-YABR",
+        "release_date": "2016-06-16",
+        "platform": "SoundCloud",
+        "url": "https://soundcloud.com/nilodude/sets/al-yabr",
+        "tracks": [
+          {"title": "94 Dunas (farsantedeaupa's First Blood)", "url": "https://soundcloud.com/nilodude/sets/al-yabr/94-dunas-farsantedeaupas-first-blood"},
+          {"title": "Remember Soundboy (voices From Creep Afrika)", "url": "https://soundcloud.com/nilodude/sets/al-yabr/remember-soundboy-voices-from-creep-afrika"},
+          {"title": "Getal Mear (farsantedeaupa Hunts El Colibri)", "url": "https://soundcloud.com/nilodude/sets/al-yabr/getal-mear-farsantedeaupa-hunts-el-colibri"},
+          {"title": "Otsirc Usej Re", "url": "https://soundcloud.com/nilodude/sets/al-yabr/otsirc-usej-re"},
+          {"title": "Sahara Y Sedal [BONUS]", "url": "https://soundcloud.com/nilodude/sets/al-yabr/sahara-y-sedal-bonus"}
+        ]
+      },
+      {
+        "type": "compilation",
+        "title": "Grandes Edits Vol.1",
+        "release_date": "2018-10-26",
+        "platform": "Bandcamp",
+        "url": "https://discosdenuestrasegnora.bandcamp.com/album/ddns09-grandes-edits-vol-1?t=3",
+        "tracks": [
+          {"title": "Funky Axe", "url": "https://discosdenuestrasegnora.bandcamp.com/track/nilo-dude-funky-axe"}
+        ]
+      }
+    ]
+  
+  
+  
   ngOnInit(): void {
 
   }
