@@ -13,3 +13,29 @@
     position:absolute;
 }
  
+.albums{
+    font-size:85%;
+    line-height:115%;
+    background-color: rgba(49, 31, 78, 0.068);
+    color:rgb(125, 88, 184) !important;
+    border-radius: 10px;
+    box-shadow: inset;
+    width:40%;
+    max-height:80%;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(49, 31, 78, 0.068) rgba(49, 31, 78, 0.068);
+    .album{
+        background-color: #ffffff00;
+        min-width:20em;
+        
+        // backdrop-filter: invert(100%);
+        
+        -webkit-mask: linear-gradient( 0deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 50%,rgba(0, 0, 0, 0) 100%),
+        linear-gradient( 90deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 50%,rgba(0, 0, 0, 0) 100%)
+    }
+}
+
+.pointer{
+    cursor: pointer;
+}

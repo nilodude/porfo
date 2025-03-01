@@ -12,6 +12,15 @@
    
 }
 
+.smalllogo{
+    mask-repeat: no-repeat;
+    background-color: rgb(78, 15, 129);
+    mask-size: 50%;
+    mask-position: center;
+    min-width: 24em;
+   
+}
+
 .logoContainer{
     transition: transform 0.9s ease-in-out;  
 }

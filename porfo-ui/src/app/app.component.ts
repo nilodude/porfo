@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import p5 from 'p5';
@@ -83,7 +84,7 @@ const sketch = (p: p5) => {
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [CommonModule, RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -145,7 +146,7 @@ export class AppComponent implements OnInit, AfterViewInit{
         },
       {
         "type": "album",
-        "title": "Acid on Bitches",
+        "title": "[IND012] Acid on Bitches",
         "release_date": "2021-12-01",
         "platform": "Bandcamp",
         "url": "https://nilodude.bandcamp.com/releases",
@@ -163,6 +164,32 @@ export class AppComponent implements OnInit, AfterViewInit{
           {"title": "Ácido Chupacabra", "url": "https://nilodude.bandcamp.com/track/cido-chupacabra"}
         ]
       },
+      
+      {
+        "type": "album",
+        "title": "Bounded Input Bouncing Output",
+        "release_date": "2019-01-21",
+        "platform": "Bandcamp",
+        "url": "https://nilodude.bandcamp.com/album/bounded-input-bouncing-output-ind005",
+        "path": "D:\\MUSICA\\horno\\nilodude_bibo_ind005",
+        "tracks": [
+          {"title": "iloguarda", "url": "https://nilodude.bandcamp.com/track/iloguarda"},
+          {"title": "Lowpass Fistro", "url": "https://nilodude.bandcamp.com/track/lowpass-fistro-2"},
+          {"title": "AAAAAAA", "url": "https://nilodude.bandcamp.com/track/aaaaaaa"},
+          {"title": "Mazedrum", "url": "https://nilodude.bandcamp.com/track/mazedrum"},
+          {"title": "BBBBBBBB", "url": "https://nilodude.bandcamp.com/track/bbbbbbbb"}
+        ]
+      },
+      {
+        "type": "compilation",
+        "title": "Grandes Edits Vol.1",
+        "release_date": "2018-10-26",
+        "platform": "Bandcamp",
+        "url": "https://discosdenuestrasegnora.bandcamp.com/album/ddns09-grandes-edits-vol-1?t=3",
+        "tracks": [
+          {"title": "Funky Axe", "url": "https://discosdenuestrasegnora.bandcamp.com/track/nilo-dude-funky-axe"}
+        ]
+      },
       {
         "type": "album",
         "title": "Grinding EP",
@@ -171,7 +198,7 @@ export class AppComponent implements OnInit, AfterViewInit{
         "url": "https://industrias94.bandcamp.com/album/grinding-ep-ind001",
         "tracks": [
           {
-            "title": "Poisson XXX (ft. Digital Diógenes)",
+            "title": "Poisson XXX",
             "artist": "Lorenzo Soria",
             "url": "https://industrias94.bandcamp.com/track/lorenzo-soria-poisson-xxx-ft-digital-diogenes"
           },
@@ -190,21 +217,6 @@ export class AppComponent implements OnInit, AfterViewInit{
             "artist": "Alphone",
             "url": "https://industrias94.bandcamp.com/track/alphone-dungeology"
           }
-        ]
-      },
-      {
-        "type": "album",
-        "title": "Bounded Input Bouncing Output",
-        "release_date": "2019-01-21",
-        "platform": "Bandcamp",
-        "url": "https://nilodude.bandcamp.com/album/bounded-input-bouncing-output-ind005",
-        "path": "D:\\MUSICA\\horno\\nilodude_bibo_ind005",
-        "tracks": [
-          {"title": "iloguarda", "url": "https://nilodude.bandcamp.com/track/iloguarda"},
-          {"title": "Lowpass Fistro", "url": "https://nilodude.bandcamp.com/track/lowpass-fistro-2"},
-          {"title": "AAAAAAA", "url": "https://nilodude.bandcamp.com/track/aaaaaaa"},
-          {"title": "Mazedrum", "url": "https://nilodude.bandcamp.com/track/mazedrum"},
-          {"title": "BBBBBBBB", "url": "https://nilodude.bandcamp.com/track/bbbbbbbb"}
         ]
       },
       {
@@ -235,16 +247,7 @@ export class AppComponent implements OnInit, AfterViewInit{
           {"title": "Sahara Y Sedal [BONUS]", "url": "https://soundcloud.com/nilodude/sets/al-yabr/sahara-y-sedal-bonus"}
         ]
       },
-      {
-        "type": "compilation",
-        "title": "Grandes Edits Vol.1",
-        "release_date": "2018-10-26",
-        "platform": "Bandcamp",
-        "url": "https://discosdenuestrasegnora.bandcamp.com/album/ddns09-grandes-edits-vol-1?t=3",
-        "tracks": [
-          {"title": "Funky Axe", "url": "https://discosdenuestrasegnora.bandcamp.com/track/nilo-dude-funky-axe"}
-        ]
-      }
+      
     ]
   
   
@@ -259,7 +262,9 @@ export class AppComponent implements OnInit, AfterViewInit{
   open(site: string){
     window.open(this.sites[site])
   }
-  
+  openAlbum(site: string){
+    window.open(site)
+  }
 }
 
 
