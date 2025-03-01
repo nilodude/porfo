@@ -78,6 +78,7 @@ const sketch = (p: p5) => {
         logo.style.filter = 'blur(30px) invert('+x*y/40000+'%)'
       })
     }
+    // TODO: need to adapt font color to background changing
     
   };
 };

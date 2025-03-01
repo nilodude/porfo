@@ -4,7 +4,7 @@
         <div class="albums d-flex flex-column gap-2">
             <div *ngFor="let album of this.catalog" class="album d-flex flex-column gap-1 justify-content-center align-items-start p-4">
                 <div class="d-flex align-items-center gap-2">
-                    <div class="fs-3" (click)="openAlbum(album.url)">
+                    <div class="pointer fs-3" (click)="openAlbum(album.url)">
                         {{album.title}}
                     </div>
                     <div class="fs-6">

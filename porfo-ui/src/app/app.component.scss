@@ -14,10 +14,11 @@
 }
  
 .albums{
+    font-family: 'Doto';
     font-size:85%;
     line-height:115%;
-    background-color: rgba(49, 31, 78, 0.068);
-    color:rgb(125, 88, 184) !important;
+    // background-color: rgba(49, 31, 78, 0.199);
+    color:rgb(172, 146, 214) !important;
     border-radius: 10px;
     box-shadow: inset;
     width:40%;
@@ -26,13 +27,18 @@
     scrollbar-width: thin;
     scrollbar-color: rgba(49, 31, 78, 0.068) rgba(49, 31, 78, 0.068);
     .album{
-        background-color: #ffffff00;
+        background-color: #ffffff34;
         min-width:20em;
-        
+        border:0.5px dotted #cacaca18;
         // backdrop-filter: invert(100%);
         
-        -webkit-mask: linear-gradient( 0deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 50%,rgba(0, 0, 0, 0) 100%),
-        linear-gradient( 90deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 50%,rgba(0, 0, 0, 0) 100%)
+        -webkit-mask: linear-gradient( 45deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.452) 50%,rgba(0, 0, 0, 0) 100%),
+        linear-gradient( 135deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.459) 50%,rgba(0, 0, 0, 0) 100%),;
+        // linear-gradient( 270deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.459) 50%,rgba(0, 0, 0, 0) 100%)
+
+        .tracks{
+            padding: 1em 3em
+        }
     }
 }
 
