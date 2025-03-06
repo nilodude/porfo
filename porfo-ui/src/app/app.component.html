@@ -5,11 +5,11 @@
             <div class="jap d-flex">
                 {{jap}} EVERY BASE IS BASE 10
             </div>
-            <div class="arcaraho fst-italic {{!arcaraho ? '' : ''}}" (click)="arcaraho = !arcaraho">{{!arcaraho ? 'atomaporculo' : 'ave ave?'}}</div>
+            <div class="arcaraho col-3 fst-italic {{!arcaraho ? '' : ''}}" (click)="arcaraho = !arcaraho">{{!arcaraho ? 'atomaporculo' : 'ave ave?'}}</div>
         </div>
         
         <div *ngIf="!arcaraho" class="albums d-flex flex-column">
-            <div *ngFor="let album of this.catalog" class="album d-flex flex-column gap-1 justify-content-center align-items-center p-4">
+            <div *ngFor="let album of this.catalog" class="album d-flex flex-column gap-1 justify-content-center align-items-center py-4">
                 <div class="d-flex align-items-center justify-content-center gap-2">
                     <div class="pointer fs-2" (click)="openAlbum(album.url)">
                         {{album.title}}

@@ -16,6 +16,7 @@
     font-family: 'DotGothic16';
     font-size: 300%;
     color:rgb(60, 18, 122);
+    cursor: url('../../public/icons/nilodude.svg') 2 2, auto
 }
 .arcaraho{
     font-size:140%;
@@ -33,14 +34,14 @@
 
 .albums{
     font-family: 'Doto';
-    font-size:100%;
+    font-size:120%;
     line-height:115%;
     // background-color: rgba(49, 31, 78, 0.199);
     color:rgb(172, 146, 214) !important;
     filter: blur(0.5px);
     border-radius: 10px;
     box-shadow: inset;
-    max-width:50em;
+    max-width:46em;
     max-height:80%;
     overflow-y: scroll;
     scrollbar-width: thin;
@@ -57,9 +58,9 @@
         // linear-gradient( 270deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.459) 50%,rgba(0, 0, 0, 0) 100%)
 
         .tracks{
-            padding:1em 3em 0em 3em;
+            padding:1em 0.5em 0em 0.5em;
             .trackname{
-                font-size: 130%;
+                font-size: 120%;
             }
         }
     }
