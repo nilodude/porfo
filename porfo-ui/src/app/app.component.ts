@@ -127,22 +127,22 @@ export class AppComponent implements OnInit, AfterViewInit{
               "title": "Ácido Chupacabra",
               "url": "https://bitchesonacidacid.bandcamp.com/track/cido-chupacabra"
             },
-            {
-              "title": "Dennis Coffey",
-              "url": "https://bitchesonacidacid.bandcamp.com/track/dennis-coffey"
-            },
-            {
-              "title": "Uncanny Silicon",
-              "url": "https://bitchesonacidacid.bandcamp.com/track/uncanny-silicon"
-            },
-            {
-              "title": "Ácido Two",
-              "url": "https://bitchesonacidacid.bandcamp.com/track/cido-two"
-            },
-            {
-              "title": "Sérselo",
-              "url": "https://bitchesonacidacid.bandcamp.com/track/s-rselo"
-            }
+            // {
+            //   "title": "Dennis Coffey",
+            //   "url": "https://bitchesonacidacid.bandcamp.com/track/dennis-coffey"
+            // },
+            // {
+            //   "title": "Uncanny Silicon",
+            //   "url": "https://bitchesonacidacid.bandcamp.com/track/uncanny-silicon"
+            // },
+            // {
+            //   "title": "Ácido Two",
+            //   "url": "https://bitchesonacidacid.bandcamp.com/track/cido-two"
+            // },
+            // {
+            //   "title": "Sérselo",
+            //   "url": "https://bitchesonacidacid.bandcamp.com/track/s-rselo"
+            // }
           ]
         },
       {
@@ -157,12 +157,12 @@ export class AppComponent implements OnInit, AfterViewInit{
           {"title": "Uncanny Silicon", "url": "https://nilodude.bandcamp.com/track/uncanny-silicon"},
           {"title": "Ácido Two", "url": "https://nilodude.bandcamp.com/track/a3-cido-two"},
           {"title": "Sérselo", "url": "https://nilodude.bandcamp.com/track/s-rselo"},
-          {"title": "Cruisin", "url": "https://nilodude.bandcamp.com/track/cruisin"},
-          {"title": "Dias Viejos", "url": "https://nilodude.bandcamp.com/track/dias-viejos"},
-          {"title": "Wearing Very Suspicious Sunglasses for Obvious Reasons", "url": "https://nilodude.bandcamp.com/track/wearing-very-suspicious-sunglasses-for-obvious-reasons"},
-          {"title": "Aztec-1", "url": "https://nilodude.bandcamp.com/track/aztec-1"},
-          {"title": "Alien B-Boy Battle", "url": "https://nilodude.bandcamp.com/track/alien-b-boy-battle"},
-          {"title": "Ácido Chupacabra", "url": "https://nilodude.bandcamp.com/track/cido-chupacabra"}
+          // {"title": "Cruisin", "url": "https://nilodude.bandcamp.com/track/cruisin"},
+          // {"title": "Dias Viejos", "url": "https://nilodude.bandcamp.com/track/dias-viejos"},
+          // {"title": "Wearing Very Suspicious Sunglasses for Obvious Reasons", "url": "https://nilodude.bandcamp.com/track/wearing-very-suspicious-sunglasses-for-obvious-reasons"},
+          // {"title": "Aztec-1", "url": "https://nilodude.bandcamp.com/track/aztec-1"},
+          // {"title": "Alien B-Boy Battle", "url": "https://nilodude.bandcamp.com/track/alien-b-boy-battle"},
+          // {"title": "Ácido Chupacabra", "url": "https://nilodude.bandcamp.com/track/cido-chupacabra"}
         ]
       },
       
@@ -199,19 +199,9 @@ export class AppComponent implements OnInit, AfterViewInit{
         "url": "https://industrias94.bandcamp.com/album/grinding-ep-ind001",
         "tracks": [
           {
-            "title": "Poisson XXX",
-            "artist": "Lorenzo Soria",
-            "url": "https://industrias94.bandcamp.com/track/lorenzo-soria-poisson-xxx-ft-digital-diogenes"
-          },
-          {
             "title": "No Chances",
             "artist": "Alphone",
             "url": "https://industrias94.bandcamp.com/track/alphone-no-chances"
-          },
-          {
-            "title": "Modern Drugs",
-            "artist": "Lorenzo Soria",
-            "url": "https://industrias94.bandcamp.com/track/lorenzo-soria-modern-drugs"
           },
           {
             "title": "Dungeology",
@@ -251,7 +241,7 @@ export class AppComponent implements OnInit, AfterViewInit{
       
     ]
   
-  
+  arcaraho: boolean = false
   
   ngOnInit(): void {
 

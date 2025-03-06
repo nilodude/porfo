@@ -6,19 +6,9 @@
 .logo{
     mask-repeat: no-repeat;
     background-color: rgb(78, 15, 129);
-    mask-size: 70%;
+    mask-size: 11em;
     mask-position: center;
     min-width: 24em;
-   
-}
-
-.smalllogo{
-    mask-repeat: no-repeat;
-    background-color: rgb(78, 15, 129);
-    mask-size: 50%;
-    mask-position: center;
-    min-width: 24em;
-   
 }
 
 .logoContainer{
@@ -34,7 +24,7 @@
 .spotifyLogo {
     -webkit-mask-image: url('../public/icons/spotify.svg');
     mask-image: url('../public/icons/spotify.svg');
-    mask-size: 60%;
+    mask-size: 10em;
 }
 
 .soundcloudLogo {
