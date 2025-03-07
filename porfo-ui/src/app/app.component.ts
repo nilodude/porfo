@@ -98,10 +98,11 @@ export class AppComponent implements OnInit, AfterViewInit{
   catalog: any =  [
       {
           "type": "album",
-          "title": "[DDNS17] Bitches On Acid",
-          "release_date": "2021-12-01",
+          "title": "Bitches On Acid [DDNS17]",
+          "release_date": new Date("2021-12-01"),
           "platform": "Bandcamp",
           "url": "https://bitchesonacidacid.bandcamp.com/album/ddns17-bitches-on-acid",
+          "wiki":"https://en.wikipedia.org/wiki/Portal:Current_events/December_2021",
           "tracks": [
             {
               "title": "Cruisin",
@@ -147,10 +148,11 @@ export class AppComponent implements OnInit, AfterViewInit{
         },
       {
         "type": "album",
-        "title": "[IND012] Acid on Bitches",
+        "title": "Acid on Bitches [IND012]",
         "release_date": "2021-12-01",
         "platform": "Bandcamp",
         "url": "https://nilodude.bandcamp.com/releases",
+        "wiki":"https://en.wikipedia.org/wiki/Portal:Current_events/December_2021",
         "path": "D:\\MUSICA\\ableton\\ni uno mas\\bitchesonacid\\entrega",
         "tracks": [
           {"title": "Dennis Coffey", "url": "https://nilodude.bandcamp.com/track/dennis-coffey"},
@@ -165,13 +167,13 @@ export class AppComponent implements OnInit, AfterViewInit{
           // {"title": "Ácido Chupacabra", "url": "https://nilodude.bandcamp.com/track/cido-chupacabra"}
         ]
       },
-      
       {
         "type": "album",
-        "title": "Bounded Input Bouncing Output",
+        "title": "Bounded Input Bouncing Output [IND005]",
         "release_date": "2019-01-21",
         "platform": "Bandcamp",
         "url": "https://nilodude.bandcamp.com/album/bounded-input-bouncing-output-ind005",
+        "wiki":"https://en.wikipedia.org/wiki/Portal:Current_events/January_2019",
         "path": "D:\\MUSICA\\horno\\nilodude_bibo_ind005",
         "tracks": [
           {"title": "iloguarda", "url": "https://nilodude.bandcamp.com/track/iloguarda"},
@@ -183,20 +185,22 @@ export class AppComponent implements OnInit, AfterViewInit{
       },
       {
         "type": "compilation",
-        "title": "Grandes Edits Vol.1",
+        "title": "Grandes Edits Vol.1 [DDNS09]",
         "release_date": "2018-10-26",
         "platform": "Bandcamp",
         "url": "https://discosdenuestrasegnora.bandcamp.com/album/ddns09-grandes-edits-vol-1?t=3",
+        "wiki":"https://en.wikipedia.org/wiki/Portal:Current_events/October_2018",
         "tracks": [
           {"title": "Funky Axe", "url": "https://discosdenuestrasegnora.bandcamp.com/track/nilo-dude-funky-axe"}
         ]
       },
       {
         "type": "album",
-        "title": "Grinding EP",
+        "title": "Grinding EP [IND001]",
         "release_date": "2017-08-17",
         "platform": "Bandcamp",
         "url": "https://industrias94.bandcamp.com/album/grinding-ep-ind001",
+        "wiki":"https://en.wikipedia.org/wiki/Portal:Current_events/August_2017",
         "tracks": [
           {
             "title": "No Chances",
@@ -212,24 +216,11 @@ export class AppComponent implements OnInit, AfterViewInit{
       },
       {
         "type": "album",
-        "title": "TOTALPH 94",
-        "release_date": "2016-05-10",
-        "platform": "SoundCloud",
-        "url": "https://soundcloud.com/nilodude/sets/totalph-94",
-        "tracks": [
-          {"title": "Jiomega", "url": "https://soundcloud.com/nilodude/01-jiomega?in=nilodude/sets/totalph-94"},
-          {"title": "Mentalidad", "url": "https://soundcloud.com/nilodude/02-mentalidad?in=nilodude/sets/totalph-94"},
-          {"title": "Street Shark", "url": "https://soundcloud.com/nilodude/03-street-shark?in=nilodude/sets/totalph-94"},
-          {"title": "Y si Yo (madre)", "url": "https://soundcloud.com/nilodude/04-y-si-yo-madre?in=nilodude/sets/totalph-94"},
-          {"title": "Farsantedeaupa - Cacatura (alphone Divides By Zero)[BONUS]", "url": "https://soundcloud.com/nilodude/05-farsantedeaupa-cacatura-alphone-divides-by-zerobonus?in=nilodude/sets/totalph-94"}
-        ]
-      },
-      {
-        "type": "album",
         "title": "AL-YABR",
         "release_date": "2016-06-16",
         "platform": "SoundCloud",
         "url": "https://soundcloud.com/nilodude/sets/al-yabr",
+        "wiki":"https://en.wikipedia.org/wiki/Portal:Current_events/June_2016",
         "tracks": [
           {"title": "94 Dunas (farsantedeaupa's First Blood)", "url": "https://soundcloud.com/nilodude/01-94-dunas-farsantedeaupas-first-blood?in=nilodude/sets/al-yabr"},
           {"title": "Remember Soundboy (voices From Creep Afrika)", "url": "https://soundcloud.com/nilodude/02-remember-soundboy-voices-from-creep-afrika?in=nilodude/sets/al-yabr"},
@@ -238,6 +229,22 @@ export class AppComponent implements OnInit, AfterViewInit{
           {"title": "Sahara Y Sedal [BONUS]", "url": "https://soundcloud.com/nilodude/05-sahara-y-sedal-bonus?in=nilodude/sets/al-yabr"}
         ]
       },
+      {
+        "type": "album",
+        "title": "TOTALPH 94",
+        "release_date": "2016-05-10",
+        "platform": "SoundCloud",
+        "url": "https://soundcloud.com/nilodude/sets/totalph-94",
+        "wiki":"https://en.wikipedia.org/wiki/Portal:Current_events/May_2016",
+        "tracks": [
+          {"title": "Jiomega", "url": "https://soundcloud.com/nilodude/01-jiomega?in=nilodude/sets/totalph-94"},
+          {"title": "Mentalidad", "url": "https://soundcloud.com/nilodude/02-mentalidad?in=nilodude/sets/totalph-94"},
+          {"title": "Street Shark", "url": "https://soundcloud.com/nilodude/03-street-shark?in=nilodude/sets/totalph-94"},
+          {"title": "Y si Yo (madre)", "url": "https://soundcloud.com/nilodude/04-y-si-yo-madre?in=nilodude/sets/totalph-94"},
+          {"title": "Farsantedeaupa - Cacatura (alphone Divides By Zero)[BONUS]", "url": "https://soundcloud.com/nilodude/05-farsantedeaupa-cacatura-alphone-divides-by-zerobonus?in=nilodude/sets/totalph-94"}
+        ]
+      },
+      
       
     ]
   

@@ -10,12 +10,12 @@
         
         <div *ngIf="!arcaraho" class="albums d-flex flex-column">
             <div *ngFor="let album of this.catalog" class="album d-flex flex-column gap-1 justify-content-center align-items-center py-4">
-                <div class="d-flex align-items-center justify-content-center gap-2">
+                <div class="d-flex flex-wrap align-items-center justify-content-center gap-1">
                     <div class="pointer fs-2" (click)="openAlbum(album.url)">
                         {{album.title}}
                     </div>
-                    <div class="fs-6">
-                        {{album.release_date}}
+                    <div class="fs-6 wikipointer" (click)="openAlbum(album.wiki)">
+                        {{album.release_date | date :'MMMMyyyy'}}
                     </div>
                 </div>    
                 <div class="tracks d-flex flex-column gap-1" >
