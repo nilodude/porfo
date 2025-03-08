@@ -30,18 +30,25 @@ const sketch = (p: p5) => {
     if(event.target.className.includes('logo')){
       // console.log(event.target.className)
     }
-    p.fill(180,170,200,Math.random()*2)
-    p.stroke(100,Math.random()*100,200,Math.random()*50)
-    p.rotateX(0)
-    p.translate(0,0,0)
-    p.torus(event.clientX-p.windowWidth/2,event.clientY-p.windowHeight/2,10 ,10);
-    p.translate(0,0,0)
-    p.ellipse(event.clientX-p.windowWidth/2,event.clientY-p.windowHeight/2,10 ,10);
-    
+    if(p){
+      p.fill(180,170,200,Math.random()*2)
+      p.stroke(100,Math.random()*100,200,Math.random()*50)
+      p.rotateX(0)
+      p.translate(0,0,0)
+      p.torus(event.clientX-p.windowWidth/2,event.clientY-p.windowHeight/2,10 ,10);
+      p.translate(0,0,0)
+      p.ellipse(event.clientX-p.windowWidth/2,event.clientY-p.windowHeight/2,10 ,10);
+    }
+    let musicDiv = document.getElementsByClassName('movable') as HTMLCollectionOf<HTMLElement>
+    if(musicDiv){
+      Array.from(musicDiv).forEach((d:any)=>{
+        // TODO: instead con clientY put this inside p.mouseScrolled and use the scroll to send it
+        d.style.transform = 'translate3d('+(-event.clientY+p.windowHeight/2)/100+'cm,'+(event.clientY-p.windowHeight/2)/100+'cm,'+(event.clientY-p.windowHeight/2)+'cm)'
+      })
+    }
   }
 
   p.draw = () => {
-    
     // TODO: que caiga lluvia moraita y que por donde vaya el raton haya un paraguas, y la lluvia rebote
     // cam.tilt(p.mouseX/100)
     step = p.mouseX == 0? step : p.mouseX/100 

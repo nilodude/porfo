@@ -1,14 +1,12 @@
 <div class="app" #sketch>
     <div class="main d-flex flex-column justify-content-between align-items-center w-100 h-100 pt-5 pb-1 gap-2">
-        <!-- TODO: RENDER NI-RO DU-DE with katakana with this font https://fonts.google.com/specimen/DotGothic16?categoryFilters=Appearance:%2FTheme%2FTechno -->
-        <div class="d-flex flex-column px-1">
+        <div class="movable d-flex flex-column px-1">
             <div class="jap d-flex">
                 {{jap}} EVERY BASE IS BASE 10
             </div>
             <div class="arcaraho col-3 fst-italic {{!arcaraho ? '' : ''}}" (click)="arcaraho = !arcaraho">{{!arcaraho ? 'atomaporculo' : 'ave ave?'}}</div>
         </div>
-        
-        <div *ngIf="!arcaraho" class="albums d-flex flex-column">
+        <div *ngIf="!arcaraho" class="movable albums d-flex flex-column">
             <div *ngFor="let album of this.catalog" class="album d-flex flex-column gap-1 justify-content-center align-items-center py-4">
                 <div class="d-flex flex-wrap align-items-center justify-content-center gap-2">
                     <div class="pointer text-center fs-2 d-flex gap-1 {{album.platform}}Cursor" (click)="openAlbum(album.url)">
@@ -31,9 +29,8 @@
                     </div>
                 </div>
             </div>
-
         </div>
-        <div class="d-flex flex-wrap gap-2 w-100 justify-content-center align-items-end py-2">
+        <div class="movable d-flex flex-wrap gap-2 w-100 justify-content-center align-items-end py-2">
             <div class="logoContainer">
                 <div class="bandcampLogo logo p-4 py-xl-5 align-items-center" (click)="open('bandcamp')"></div>
             </div>
@@ -46,5 +43,3 @@
         </div>
     </div>
 </div>
-
-
