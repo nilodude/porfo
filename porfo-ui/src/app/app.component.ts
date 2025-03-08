@@ -101,7 +101,7 @@ export class AppComponent implements OnInit, AfterViewInit{
           "title": "Bitches On Acid",
           "release":"[DDNS17]",
           "release_date": new Date("2021-12-01"),
-          "platform": "Bandcamp",
+          "platform": "bandcamp",
           "url": "https://bitchesonacidacid.bandcamp.com/album/ddns17-bitches-on-acid",
           "wiki":"https://en.wikipedia.org/wiki/Portal:Current_events/December_2021",
           "tracks": [
@@ -152,7 +152,7 @@ export class AppComponent implements OnInit, AfterViewInit{
         "title": "Acid on Bitches",
         "release":"[IND012]",
         "release_date": "2021-12-01",
-        "platform": "Bandcamp",
+        "platform": "bandcamp",
         "url": "https://nilodude.bandcamp.com/releases",
         "wiki":"https://en.wikipedia.org/wiki/Portal:Current_events/December_2021",
         "path": "D:\\MUSICA\\ableton\\ni uno mas\\bitchesonacid\\entrega",
@@ -174,7 +174,7 @@ export class AppComponent implements OnInit, AfterViewInit{
         "title": "Bounded Input Bouncing Output",
         "release":"[IND005]",
         "release_date": "2019-01-21",
-        "platform": "Bandcamp",
+        "platform": "bandcamp",
         "url": "https://nilodude.bandcamp.com/album/bounded-input-bouncing-output-ind005",
         "wiki":"https://en.wikipedia.org/wiki/Portal:Current_events/January_2019",
         "path": "D:\\MUSICA\\horno\\nilodude_bibo_ind005",
@@ -191,7 +191,7 @@ export class AppComponent implements OnInit, AfterViewInit{
         "title": "Grandes Edits Vol.1",
         "release":"[DDNS09]",
         "release_date": "2018-10-26",
-        "platform": "Bandcamp",
+        "platform": "bandcamp",
         "url": "https://discosdenuestrasegnora.bandcamp.com/album/ddns09-grandes-edits-vol-1?t=3",
         "wiki":"https://en.wikipedia.org/wiki/Portal:Current_events/October_2018",
         "tracks": [
@@ -203,7 +203,7 @@ export class AppComponent implements OnInit, AfterViewInit{
         "title": "Grinding EP",
         "release":"[IND001]",
         "release_date": "2017-08-17",
-        "platform": "Bandcamp",
+        "platform": "bandcamp",
         "url": "https://industrias94.bandcamp.com/album/grinding-ep-ind001",
         "wiki":"https://en.wikipedia.org/wiki/Portal:Current_events/August_2017",
         "tracks": [
@@ -223,7 +223,7 @@ export class AppComponent implements OnInit, AfterViewInit{
         "type": "album",
         "title": "AL-YABR",
         "release_date": "2016-06-16",
-        "platform": "SoundCloud",
+        "platform": "soundcloud",
         "url": "https://soundcloud.com/nilodude/sets/al-yabr",
         "wiki":"https://en.wikipedia.org/wiki/Portal:Current_events/June_2016",
         "tracks": [
@@ -238,7 +238,7 @@ export class AppComponent implements OnInit, AfterViewInit{
         "type": "album",
         "title": "TOTALPH 94",
         "release_date": "2016-05-10",
-        "platform": "SoundCloud",
+        "platform": "soundcloud",
         "url": "https://soundcloud.com/nilodude/sets/totalph-94",
         "wiki":"https://en.wikipedia.org/wiki/Portal:Current_events/May_2016",
         "tracks": [

@@ -11,11 +11,11 @@
         <div *ngIf="!arcaraho" class="albums d-flex flex-column">
             <div *ngFor="let album of this.catalog" class="album d-flex flex-column gap-1 justify-content-center align-items-center py-4">
                 <div class="d-flex flex-wrap align-items-center justify-content-center gap-2">
-                    <div class="pointer text-center fs-2 d-flex gap-1" (click)="openAlbum(album.url)">
+                    <div class="pointer text-center fs-2 d-flex gap-1 {{album.platform =='soundcloud'?'soundcloudCursor':''}}" (click)="openAlbum(album.url)">
                         {{album.title}}
                     </div>
                     <div class="release d-flex flex-wrap justify-content-center align-items-center">
-                        <div class="pointer text-center" (click)="openAlbum(album.url)">
+                        <div class="{{album.platform}}Cursor text-center" (click)="openAlbum(album.url)">
                             {{album.release}}
                         </div>
                         <div class="wikipointer text-center" (click)="openAlbum(album.wiki)">

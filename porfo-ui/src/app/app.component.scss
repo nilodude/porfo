@@ -83,8 +83,12 @@
         cursor: url('../../public/icons/wiki.svg') 18 12, auto;
         font-size:80%;
     }
-    .pointer{
-        cursor: url('../../public/icons/bandcampS.svg') 35 5, auto;
-    }
+    
+}
+.bandcampCursor{
+    cursor: url('../../public/icons/bandcampS.svg') 35 5, auto;
+}
+.soundcloudCursor{
+    cursor: url('../../public/icons/soundcloudS.svg') 35 15, auto;
 }
 
