@@ -94,7 +94,7 @@ export class AppComponent implements OnInit, AfterViewInit{
   p5!: p5;
   @ViewChild('sketch') sketch!: ElementRef;
   sites: any = {'soundcloud': 'https://soundcloud.com/nilodude', 'bandcamp':'https://nilodude.bandcamp.com/', 'spotify':'https://open.spotify.com/artist/5QO3kUcqzBsVIwbtviZ2Be'}
-  jap:string = "ニ lオ ドゥ デ"
+  jap:string = "ニ ロ ヅ デ" //en verda ナイル川の男 (Nairukawa no otoko)
   catalog: any =  [
       {
           "type": "album",
