@@ -1,45 +1,48 @@
 <div class="app" #sketch>
-    <div class="main d-flex flex-column justify-content-between align-items-center w-100 h-100 pt-5 pb-1 gap-2">
-        <div class="movable d-flex flex-column px-1">
-            <div class="jap d-flex">
-                {{jap}} EVERY BASE IS BASE 10
+    <div class="main d-flex w-100 h-100">
+        <div id="musicDiv" class="movable d-flex flex-column justify-content-between align-items-center gap-2 w-100 h-100 pt-1 pt-lg-5 pb-lg-2">
+            <div class="movable d-flex flex-column px-1">
+                <div class="jap d-flex">
+                    {{jap}} EVERY BASE IS BASE 10
+                </div>
+                <div class="arcaraho col-3 fst-italic {{!arcaraho ? '' : ''}}" (click)="arcaraho = !arcaraho">{{!arcaraho ? 'atomaporculo' : 'ave ave?'}}</div>
             </div>
-            <div class="arcaraho col-3 fst-italic {{!arcaraho ? '' : ''}}" (click)="arcaraho = !arcaraho">{{!arcaraho ? 'atomaporculo' : 'ave ave?'}}</div>
-        </div>
-        <div *ngIf="!arcaraho" class="movable albums d-flex flex-column">
-            <div *ngFor="let album of this.catalog" class="album d-flex flex-column gap-1 justify-content-center align-items-center py-4">
-                <div class="d-flex flex-wrap align-items-center justify-content-center gap-2">
-                    <div class="pointer text-center fs-2 d-flex gap-1 {{album.platform}}Cursor" (click)="openAlbum(album.url)">
-                        {{album.title}}
-                    </div>
-                    <div class="release d-flex flex-wrap justify-content-center align-items-center">
-                        <div class="pointer {{album.platform}}Cursor text-center" (click)="openAlbum(album.url)">
-                            {{album.release}}
+            <div *ngIf="!arcaraho" class="movable albums d-flex flex-column">
+                <div *ngFor="let album of this.catalog" class="album d-flex flex-column gap-1 justify-content-center align-items-center py-3 py-xl-4">
+                    <div class="title d-flex flex-wrap align-items-center justify-content-center gap-2">
+                        <div class="pointer text-center fs-2 d-flex gap-1 {{album.platform}}Cursor" (click)="openAlbum(album.url)">
+                            {{album.title}}
                         </div>
-                        <div class="wikipointer text-center" (click)="openAlbum(album.wiki)">
-                            {{album.release_date | date :'MMMMyyyy'}}
+                        <div class="release d-flex flex-wrap justify-content-center align-items-center">
+                            <div class="pointer {{album.platform}}Cursor text-center" (click)="openAlbum(album.url)">
+                                {{album.release}}
+                            </div>
+                            <div class="wikipointer text-center" (click)="openAlbum(album.wiki)">
+                                {{album.release_date | date :'MMMMyyyy'}}
+                            </div>
                         </div>
-                    </div>
-                </div>    
-                <div class="tracks d-flex flex-column gap-1" >
-                    <div *ngFor="let track of album.tracks" class="track pointer d-flex gap-1 justify-content-center align-items-center px-1" (click)="openAlbum(track.url)">
-                        <div class="trackname text-center">
-                            {{track.title}}
+                    </div>    
+                    <div class="tracks d-flex flex-column gap-1" >
+                        <div *ngFor="let track of album.tracks" class="track pointer d-flex gap-1 justify-content-center align-items-center px-1" (click)="openAlbum(track.url)">
+                            <div class="trackname text-center">
+                                {{track.title}}
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="movable d-flex flex-wrap gap-1 gap-lg-5 w-100 justify-content-center align-items-end py-2">
+                <div class="logoContainer">
+                    <div class="bandcampLogo logo p-4 py-xl-5 align-items-center" (click)="open('bandcamp')"></div>
+                </div>
+                <div class="logoContainer">
+                    <div class="spotifyLogo logo p-4 py-xl-5 align-items-center" (click)="open('spotify')"></div>
+                </div>
+                <div class="logoContainer">
+                    <div class="soundcloudLogo logo p-4 py-xl-5 align-items-center" (click)="open('soundcloud')"></div>
+                </div>
+            </div>
         </div>
-        <div class="movable d-flex flex-wrap gap-2 w-100 justify-content-center align-items-end py-2">
-            <div class="logoContainer">
-                <div class="bandcampLogo logo p-4 py-xl-5 align-items-center" (click)="open('bandcamp')"></div>
-            </div>
-            <div class="logoContainer">
-                <div class="spotifyLogo logo p-4 py-xl-5 align-items-center" (click)="open('spotify')"></div>
-            </div>
-            <div class="logoContainer">
-                <div class="soundcloudLogo logo p-4 py-xl-5 align-items-center" (click)="open('soundcloud')"></div>
-            </div>
-        </div>
+        
     </div>
 </div>

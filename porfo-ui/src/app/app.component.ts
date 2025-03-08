@@ -28,9 +28,9 @@ const sketch = (p: p5) => {
     if(Math.random()>0.7){
       // p.background('#131313')
     }
-    if(event.target.className.includes('logo')){
-      // console.log(event.target.className)
-    }
+    // if(event.target.className.includes('logo')){
+    //   // console.log(event.target.className)
+    // }
     if(p){
       p.fill(180,170,200,Math.random()*2)
       p.stroke(100,Math.random()*100,200,Math.random()*50)
@@ -44,17 +44,21 @@ const sketch = (p: p5) => {
 
   let scrollStep = 0
   p.mouseWheel=(event:any)=>{
-    scrollStep += (event.wheelDelta >0 ? 1 :-1)*75
-    let musicDiv = document.getElementsByClassName('movable') as HTMLCollectionOf<HTMLElement>
-    if(musicDiv){
-      Array.from(musicDiv).forEach((d:any)=>{
-        globalScroll = {
-          x: -(globalScroll.x + scrollStep)/100,
-          y: (globalScroll.x + scrollStep)/100,
-          z: globalScroll.x + scrollStep
-        }
-        d.style.transform = 'translate3d('+globalScroll.x+'cm,'+globalScroll.y+'cm,'+globalScroll.z+'cm)'
-      })
+    const anyofthis =['albums','album','track','tracks','title', 'release']
+    const shouldNotScroll = anyofthis.some(word=>event.target.parentNode.className.includes(word))
+    if(!shouldNotScroll){
+      scrollStep += (event.wheelDelta >0 ? 1 :-1)*75
+      let musicDiv = document.getElementsByClassName('movable') as HTMLCollectionOf<HTMLElement>
+      if(musicDiv){
+        Array.from(musicDiv).forEach((d:any)=>{
+          globalScroll = {
+            x: -(globalScroll.x + scrollStep)/150,
+            y: (globalScroll.x + scrollStep)/150,
+            z: globalScroll.x + scrollStep
+          }
+          d.style.transform = 'translate3d('+globalScroll.x+'cm,'+globalScroll.y+'cm,'+globalScroll.z+'cm)'
+        })
+      }
     }
   }
 
