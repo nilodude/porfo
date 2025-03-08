@@ -98,7 +98,8 @@ export class AppComponent implements OnInit, AfterViewInit{
   catalog: any =  [
       {
           "type": "album",
-          "title": "Bitches On Acid [DDNS17]",
+          "title": "Bitches On Acid",
+          "release":"[DDNS17]",
           "release_date": new Date("2021-12-01"),
           "platform": "Bandcamp",
           "url": "https://bitchesonacidacid.bandcamp.com/album/ddns17-bitches-on-acid",
@@ -148,7 +149,8 @@ export class AppComponent implements OnInit, AfterViewInit{
         },
       {
         "type": "album",
-        "title": "Acid on Bitches [IND012]",
+        "title": "Acid on Bitches",
+        "release":"[IND012]",
         "release_date": "2021-12-01",
         "platform": "Bandcamp",
         "url": "https://nilodude.bandcamp.com/releases",
@@ -169,7 +171,8 @@ export class AppComponent implements OnInit, AfterViewInit{
       },
       {
         "type": "album",
-        "title": "Bounded Input Bouncing Output [IND005]",
+        "title": "Bounded Input Bouncing Output",
+        "release":"[IND005]",
         "release_date": "2019-01-21",
         "platform": "Bandcamp",
         "url": "https://nilodude.bandcamp.com/album/bounded-input-bouncing-output-ind005",
@@ -185,7 +188,8 @@ export class AppComponent implements OnInit, AfterViewInit{
       },
       {
         "type": "compilation",
-        "title": "Grandes Edits Vol.1 [DDNS09]",
+        "title": "Grandes Edits Vol.1",
+        "release":"[DDNS09]",
         "release_date": "2018-10-26",
         "platform": "Bandcamp",
         "url": "https://discosdenuestrasegnora.bandcamp.com/album/ddns09-grandes-edits-vol-1?t=3",
@@ -196,7 +200,8 @@ export class AppComponent implements OnInit, AfterViewInit{
       },
       {
         "type": "album",
-        "title": "Grinding EP [IND001]",
+        "title": "Grinding EP",
+        "release":"[IND001]",
         "release_date": "2017-08-17",
         "platform": "Bandcamp",
         "url": "https://industrias94.bandcamp.com/album/grinding-ep-ind001",
