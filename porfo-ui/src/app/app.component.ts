@@ -5,7 +5,7 @@ import p5 from 'p5';
 
 const sketch = (p: p5) => {
   let cam: p5.Camera;
-  let margin = 300
+  let margin = 100
   let x = margin;
   let y = 0;
   let flipX =false
@@ -95,7 +95,7 @@ const sketch = (p: p5) => {
     let logos = document.getElementsByClassName('logo')
     if(logos){
       Array.from(logos).forEach((logo:any)=>{
-        logo.style.filter = 'blur(30px) invert('+x*y/40000+'%)'
+        logo.style.filter = 'blur(30px) invert('+x*y/5000+'%)'
       })
     }
     // TODO: need to adapt font color to background changing
