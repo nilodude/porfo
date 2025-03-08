@@ -12,6 +12,7 @@ const sketch = (p: p5) => {
   let flipY =false
   let step = 10
   let capao = 80
+  let globalScroll = {x:0,y:0,z:0}
   p.preload = () => {};
   const appMargin = {x:0,y:0}
   p.setup = () => {
@@ -39,11 +40,20 @@ const sketch = (p: p5) => {
       p.translate(0,0,0)
       p.ellipse(event.clientX-p.windowWidth/2,event.clientY-p.windowHeight/2,10 ,10);
     }
+  }
+
+  let scrollStep = 0
+  p.mouseWheel=(event:any)=>{
+    scrollStep += (event.wheelDelta >0 ? 1 :-1)*75
     let musicDiv = document.getElementsByClassName('movable') as HTMLCollectionOf<HTMLElement>
     if(musicDiv){
       Array.from(musicDiv).forEach((d:any)=>{
-        // TODO: instead con clientY put this inside p.mouseScrolled and use the scroll to send it
-        d.style.transform = 'translate3d('+(-event.clientY+p.windowHeight/2)/100+'cm,'+(event.clientY-p.windowHeight/2)/100+'cm,'+(event.clientY-p.windowHeight/2)+'cm)'
+        globalScroll = {
+          x: -(globalScroll.x + scrollStep)/100,
+          y: (globalScroll.x + scrollStep)/100,
+          z: globalScroll.x + scrollStep
+        }
+        d.style.transform = 'translate3d('+globalScroll.x+'cm,'+globalScroll.y+'cm,'+globalScroll.z+'cm)'
       })
     }
   }
@@ -51,11 +61,10 @@ const sketch = (p: p5) => {
   p.draw = () => {
     // TODO: que caiga lluvia moraita y que por donde vaya el raton haya un paraguas, y la lluvia rebote
     // cam.tilt(p.mouseX/100)
-    step = p.mouseX == 0? step : p.mouseX/100 
-    capao =  p.mouseY == 0? 10 :  p.mouseY/20
-    // console.log(step,capao)
     p.fill(180,170,200,Math.random()*50)
     p.stroke(100,Math.random()*100,200,Math.random()*60)
+    step = p.mouseX == 0? step : p.mouseX/100 
+    capao =  p.mouseY == 0? 10 :  p.mouseY/20
     // p.ellipse(0,-p.windowHeight/2,50,50)
     let w = (x/40)*y/10000
     let h = (y*y/3);
