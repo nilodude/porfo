@@ -10,7 +10,7 @@ const sketch = (p: p5) => {
   let y = 0;
   let flipX =false
   let flipY =false
-  let step = 10
+  let step = 8
   let capao = 30
   let globalScroll = {x:0,y:0,z:0}
   p.preload = () => {};
@@ -71,7 +71,7 @@ const sketch = (p: p5) => {
     capao =  p.mouseY/20 <= 0? 5 :  (p.mouseY/20 >=20?20:(Math.random()+2.5)*p.mouseY/20)
     // p.ellipse(0,-p.windowHeight/2,50,50)
     let w = (x/40)*y/10000
-    let h = (y*y/3);
+    let h = (Math.random()+5.5)*(y*y/3);
     h = h> capao ? capao : (h<-capao ? -capao : h)
     // TODO: this rotateX should change over time as well. lower the denominator, "crazier" the pattern. whatever "crazy" means 
     p.rotateX(-x*y/50000)
@@ -95,7 +95,7 @@ const sketch = (p: p5) => {
     let logos = document.getElementsByClassName('logo')
     if(logos){
       Array.from(logos).forEach((logo:any)=>{
-        logo.style.filter = 'blur(30px) invert('+x*y/5000+'%)'
+        logo.style.filter = 'blur(30px) invert('+x*y/50000+'%)'
       })
     }
     // TODO: need to adapt font color to background changing
@@ -280,6 +280,14 @@ export class AppComponent implements OnInit, AfterViewInit{
   }
   ngAfterViewInit() {
     this.p5 = new p5(sketch, this.sketch.nativeElement);
+    this.sketch.nativeElement.style.transform = 'translate3d(0cm,0cm,-82cm) rotate3d(0,1,0,-72deg);'
+    //TODO:applying transformation to canvas works but only once canvas is drawn
+    // let torusCanvas = document.getElementsByClassName('p5Canvas') as HTMLCollectionOf<HTMLElement>
+    // if(torusCanvas){
+    //   Array.from(torusCanvas).forEach(c=>{
+    //     c.style.transform= 'translate3d(0cm,0cm,-82cm) rotate3d(0,1,0,-72deg);'
+    //   })
+    // }
   }
   
   open(site: string){

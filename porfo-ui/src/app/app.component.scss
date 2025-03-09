@@ -7,6 +7,10 @@
     width:100vw;
     height:100vh;
     overflow: hidden;
+    perspective: 1000cm;
+    // .p5Canvas{
+    //     transform: translate3d(0cm,0cm,-82cm) rotate3d(0,1,0,-72deg);
+    // }
 }
 
 .main{
@@ -97,4 +101,5 @@
 .soundcloudCursor{
     cursor: url('../../public/icons/soundcloudS.svg') 35 15, auto;
 }
+
 
