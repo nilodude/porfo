@@ -28,9 +28,6 @@ const sketch = (p: p5) => {
     if(Math.random()>0.7){
       // p.background('#131313')
     }
-    // if(event.target.className.includes('logo')){
-    //   // console.log(event.target.className)
-    // }
     if(p){
       p.fill(180,170,200,Math.random()*2)
       p.stroke(100,Math.random()*100,200,Math.random()*50)
@@ -38,7 +35,7 @@ const sketch = (p: p5) => {
       p.translate(0,0,0)
       p.torus(event.clientX-p.windowWidth/2,event.clientY-p.windowHeight/2,10 ,10);
       p.translate(0,0,0)
-      p.ellipse(event.clientX-p.windowWidth/2,event.clientY-p.windowHeight/2,10 ,10);
+      // p.ellipse(event.clientX-p.windowWidth/2,event.clientY-p.windowHeight/2,10 ,10);
     }
   }
 
@@ -75,13 +72,14 @@ const sketch = (p: p5) => {
     let h = (hscale*Math.random())*(y*y/3);
     h = h> capao ? capao : (h<-capao ? -capao : h)
     // TODO: this rotateX should change over time as well. lower the denominator, "crazier" the pattern. whatever "crazy" means 
+    
     p.rotateX(-x*y/50000)
+    
     p.translate(0,0,y/10)
-    p.ellipse(x-p.width/2,y,w ,h);
-   
     x = x + step*(flipX?-1:1)+w*(Math.random()-0.5);
     y =y + (flipX?-1:1)*h/400+(Math.random()-0.5) *-88
     
+    p.ellipse(x-p.width/2,y,w ,h);
     if(Math.abs(p.windowWidth -x) < margin || x<margin ){
       flipX = !flipX
     }
