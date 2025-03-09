@@ -11,7 +11,7 @@ const sketch = (p: p5) => {
   let flipX =false
   let flipY =false
   let step = 10
-  let capao = 80
+  let capao = 30
   let globalScroll = {x:0,y:0,z:0}
   p.preload = () => {};
   const appMargin = {x:0,y:0}
@@ -67,8 +67,8 @@ const sketch = (p: p5) => {
     // cam.tilt(p.mouseX/100)
     p.fill(180,170,200,Math.random()*50)
     p.stroke(100,Math.random()*100,200,Math.random()*60)
-    step = p.mouseX == 0? step : p.mouseX/100 
-    capao =  p.mouseY == 0? 10 :  p.mouseY/20
+    step = p.mouseX/100 <= 1? step : p.mouseX/100 
+    capao =  p.mouseY/20 <= 0? 5 :  (p.mouseY/20 >=20?20:(Math.random()+2.5)*p.mouseY/20)
     // p.ellipse(0,-p.windowHeight/2,50,50)
     let w = (x/40)*y/10000
     let h = (y*y/3);
