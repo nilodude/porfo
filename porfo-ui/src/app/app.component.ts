@@ -72,14 +72,15 @@ const sketch = (p: p5) => {
     let h = (hscale*Math.random())*(y*y/3);
     h = h> capao ? capao : (h<-capao ? -capao : h)
     // TODO: this rotateX should change over time as well. lower the denominator, "crazier" the pattern. whatever "crazy" means 
-    
     p.rotateX(-x*y/50000)
-    
-    p.translate(0,0,y/10)
+    // TODO: this p.translate(0,0,step*y), or p.translate(0,0,2*y) instead of p.translate(0,0,y/10) really changes the shape of the "final figure"
+    //BUT it makes torus render NOT centered and loses its magic. should beginShape & endShape to apply different translation to torus and ellipses (background lines)
+    p.translate(0,0,0.1*y)
     x = x + step*(flipX?-1:1)+w*(Math.random()-0.5);
+    p.ellipse(x-p.width/2,y,w ,h);
     y =y + (flipX?-1:1)*h/400+(Math.random()-0.5) *-88
     
-    p.ellipse(x-p.width/2,y,w ,h);
+    
     if(Math.abs(p.windowWidth -x) < margin || x<margin ){
       flipX = !flipX
     }
