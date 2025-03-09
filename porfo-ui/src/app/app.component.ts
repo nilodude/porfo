@@ -11,7 +11,7 @@ const sketch = (p: p5) => {
   let flipX =false
   let flipY =false
   let step = 8
-  let capao = 30
+  let capao = 0
   let globalScroll = {x:0,y:0,z:0}
   p.preload = () => {};
   const appMargin = {x:0,y:0}
@@ -68,10 +68,11 @@ const sketch = (p: p5) => {
     p.fill(180,170,200,Math.random()*50)
     p.stroke(100,Math.random()*100,200,Math.random()*60)
     step = p.mouseX/100 <= 1? step : p.mouseX/100 
-    capao =  p.mouseY/20 <= 0? 5 :  (p.mouseY/20 >=20?20:(Math.random()+2.5)*p.mouseY/20)
+    capao =  p.mouseY/20 <= 0? 5 :  (p.mouseY/20 >=15?15:(Math.random()*2.5)*p.mouseY/20)
     // p.ellipse(0,-p.windowHeight/2,50,50)
     let w = (x/40)*y/10000
-    let h = (Math.random()+5.5)*(y*y/3);
+    let hscale= 15.5
+    let h = (hscale*Math.random())*(y*y/3);
     h = h> capao ? capao : (h<-capao ? -capao : h)
     // TODO: this rotateX should change over time as well. lower the denominator, "crazier" the pattern. whatever "crazy" means 
     p.rotateX(-x*y/50000)
